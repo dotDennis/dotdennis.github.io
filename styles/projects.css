@@ -1,0 +1,101 @@
+@import url(global.css);
+
+
+.button__return {
+  font-size: 2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.container h1 {
+  color: var(--accent);
+}
+
+.container__top {
+  text-align: center;
+  width: 100%;
+}
+
+.container__top a {
+  margin: 0 1rem;
+}
+
+.container__image--container {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.container__image--container a {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 1rem);
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+.container__image {
+  max-height: 575px;
+  object-fit: cover;
+  object-position: cover; /* If image is for a website add .container__image--website which should set position to top. */
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  opacity: var(--opacity);
+}
+
+.container__image--container:hover {
+  transform: translateY(-7px);
+  transition: transform 0.3s ease;
+}
+
+.container__subtitle {
+  color: var(--tone);
+}
+
+.custom-image {
+  max-height: 600px;
+  object-fit: cover;
+}
+
+.container__links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+h3 {
+  color: var(--tone);
+}
+
+.container p {
+  margin-top: 0;
+}
+
+
+.cta-scroll {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.cta-scroll span {
+  font-size: 3rem;
+}
+
+.lead {
+  text-align: center;
+}
