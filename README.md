@@ -22,3 +22,4 @@ Simplest solution: Live server
 - 6. redirect to 404 page when projects fail to load due to missing requirements.
 - 7. Improve accessibility
 - 8. "ME" page.
+- 9. rewrite dependencies and default values for a project. If img missing, use placeholder (instead of entering manually) etc.
