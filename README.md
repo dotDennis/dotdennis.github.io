@@ -16,3 +16,5 @@ Simplest solution: Live server
 - Add page navigation (Tricky to find on project pages)
 - Improve accessibility
 - add 404 to non existant pages, php(?), or other serverside function.
+- update css to sass & fix namings
+- consider astro.build framework

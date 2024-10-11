@@ -4,5 +4,66 @@
 /* Style content */
 
 .container {
-    text-align: center;
+    display: grid;
+    width: 80%;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px; 
+    margin: 0 auto;
+}
+
+.container--text {
+    grid-area: 1 / 1 / span 2 / 1;
+}
+
+.container--img {
+    grid-area: 1 / 2 / span 2 / 2;
+}
+
+.container--img img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+h3 {
+    color: var(--tone);
+}
+
+.container__links {
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    width: 80%;
+    display: flex;
+    flex-flow: column wrap;
+    margin: 2rem auto 0 auto;
+}
+
+h3 {
+    margin: 0 0 1rem 0;
+}
+
+h4 {
+    margin: 0;
+}
+
+.experience span {
+    font-weight: var(--weight-paragraph);
+}
+
+
+.experience {
+    max-width: 80%;
+    margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 1000px) {
+    .container--text {
+        max-width: 90%;
+    }
+    .experience {
+        max-width: 80%;
+    }
 }
