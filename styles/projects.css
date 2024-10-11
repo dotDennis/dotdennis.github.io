@@ -1,5 +1,7 @@
+/* Import styles */
 @import url(global.css);
 
+/* Style content */
 
 .button__return {
   font-size: 2rem;

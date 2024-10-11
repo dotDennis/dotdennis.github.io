@@ -1,0 +1,8 @@
+/* Import styles */
+@import url(global.css);
+
+/* Style content */
+
+.container {
+    text-align: center;
+}

@@ -1,8 +1,8 @@
 import { projects } from "../assets/projects.js";
-import { buildCards } from "../components/buildCards.js";
+import { renderCard } from "../components/renderCard.js";
 
 const container = document.querySelector("main");
 
 projects.forEach((project) => {
-  container.innerHTML += buildCards(project);
+  container.innerHTML += renderCard(project);
 });
