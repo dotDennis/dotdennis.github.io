@@ -1,10 +1,10 @@
 export function renderProject(project) {
-  // If project.title is missing, user will be redirect to 404.html (../pages/project.js)
-
   // Helper function to safely generate feature sections
   function createFeature({ title, desc }) {
     return title && desc ? `<h3>${title}</h3><p>${desc}</p>` : "";
   }
+
+  // turn into a try/catch block to catch and display potential issues
 
   // Generate optional elements using ternary operators
   const project_link = project.external.website ? `<a href="${project.external.website}">View Project</a>` : "";
@@ -19,7 +19,7 @@ export function renderProject(project) {
     ? `
       <section class="container">
         <h2>Features</h2>
-        <p>${project.features?.intro || "Features are listed below:"}</p>
+        <p>${project.features?.intro}</p>
         ${featuresHTML}
       </section>`
     : "";
@@ -33,7 +33,7 @@ export function renderProject(project) {
     </a>
   </section>
   <div class="container__image--container">
-    <img class="container__image" src="${project.image.url || "placeholder-image.png"}" alt="${project.image.alt || "Empty placeholder image"}" />
+    <img class="container__image" src="${project.image?.url || "../img/placeholder-image.png"}" alt="${project.image?.alt || "Empty placeholder image"}" />
     ${image_link}
   </div>
   <section class="container" id="introduction">

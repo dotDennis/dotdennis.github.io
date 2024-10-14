@@ -11,30 +11,30 @@
   gap: 1rem;
 }
 
-.flex__containers {
+.flex__item {
   width: 100%;
   padding: 1rem;
   margin: 1rem 0 2rem 0;
 }
 
-.flex__top {
+.flex__item--top {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.flex__image {
+.flex__item--image {
   position: relative;
   transition: transform 0.3s ease;
 }
 
-.flex__image:hover {
+.flex__item--image:hover {
   transform: translateY(-7px);
   transition: transform 0.3s ease;
 }
 
 /* If image is for a website add a seperate class to style object-position: top (navbar should be present, otherwise center images.) */
-.flex__image img {
+.flex__item--image img {
   width: 100%;
   max-height: 200px;
   object-fit: cover;
@@ -45,7 +45,7 @@
   opacity: var(--opacity);
 }
 
-.flex__image a {
+.flex__item--image a {
   position: absolute;
   top: 0;
   left: 0;
@@ -54,7 +54,7 @@
   z-index: 2;
 }
 
-.flex__bottom {
+.flex__item--bottom {
   display: flex;
   gap: 1rem;
 }
@@ -71,9 +71,10 @@ div.title-name {
 
 @media screen and (min-width: 1000px) {
   .flex {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     margin-top: 4rem;
     width: 90%;
-    flex-direction: row;
     padding: 0;
   }
 }

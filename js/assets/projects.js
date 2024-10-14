@@ -10,7 +10,7 @@
 
 import { slugify } from "../utilities/slugify.js";
 
-// if source is not available use view project instead with a link to gitlab.
+// project 1 includes every property available.
 export let projects = [
   {
     id: 1,
@@ -38,10 +38,6 @@ export let projects = [
     id: 2,
     title: "Lego Project",
     description: "Working together to create an autonomous LEGO® Education SPIKE Prime robot, using pre-programmed instructions we've written to complete various tasks.",
-    image: {
-      url: "img/placeholder-image.png",
-      alt: "Empty placeholder image",
-    },
     external: {
       website: "https://gitlab.stud.idi.ntnu.no/dennissl/idata1004_gr1-prosjektoppgave/-/wikis/home",
       source: null,
@@ -55,6 +51,28 @@ export let projects = [
   {
     id: 3,
     title: "Mappeprosjekt",
+    description: "The application uses a text-based UI to provide the user with AI-generated recipies based on an entry of ingredients. Ingredients can be added, removed, modified and are checked on entry.",
+    image: {
+      url: "img/placeholder-image.png",
+      alt: "Empty placeholder image",
+    },
+    external: {
+      website: null, // it has no website except for the source url.
+      source: "https://github.com/NTNU-IE-IIR/mappe-idata1003-2024-foodwaste-dotDennis",
+    },
+    introduction: "Tasked with developing an application that contributes to consumers becoming increasingly aware of their food waste. Providing the user with an overview of available products in their assortment, and using AI to generate recepies.",
+    features: {
+      intro: "The application uses native Java, to provide the user with an assortment of products available through a text-based UI.",
+      list: [
+        { title: "Java", desc: "This website is project will be built with Java, and has already started slightly." },
+        { title: "UI", desc: "I've created the class files, but not started on the UI just yet." },
+        { title: "AI", desc: "This will be added once everything else is working and setup properly. It's not required, but would be a fun accomplishment." },
+      ],
+    },
+  },
+  {
+    id: 4,
+    title: "Programming exercies",
     description: "The application uses a text-based UI to provide the user with AI-generated recipies based on an entry of ingredients. Ingredients can be added, removed, modified and are checked on entry.",
     image: {
       url: "img/placeholder-image.png",

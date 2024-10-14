@@ -1,10 +1,11 @@
 import { slugify } from "../utilities/slugify.js";
+import { buildError } from "./buildError.js";
 
 export function renderCard(project) {
   try {
-    // Check if project.title exists, if not throw an error (console)
+    // Check if project.title exists, if not throw an error (console) – project has to exist for project.title to exist
     if (!project.title) {
-      throw new Error("Project title is required to build the project card.");
+      throw new Error("Project title is required to build the project card, does project exist?");
     }
 
     // Check if external.website exists, prepare project_link
@@ -15,23 +16,22 @@ export function renderCard(project) {
 
     // Return the HTML for the project card
     return `
-      <section class="flex__containers">
-        <div class="flex__top">
-          <div class="flex__image">
-            <img src="${project.image.url}" alt="${project.image.alt}" />
+      <div class="flex__item">
+        <div class="flex__item--top">
+          <div class="flex__item--image">
+            <img src="${project.image?.url || "../img/placeholder-image.png"}" alt="${project.image?.alt || "Empty placeholder image"}" />
             <a title="Read more about my ${project.title} project." aria-label="Read about the project" href="project.html?project=${slug}"></a>
           </div>
           <h2>${project.title}</h2>
           <p>${project.description}</p>
         </div>
-        <div class="flex__bottom">
+        <div class="flex__item--bottom">
           <a aria-label="Read more about the ${project.title} project" href="project.html?project=${slug}">Read more</a>
           ${project_link}
         </div>
-      </section>`;
+      </div>`;
   } catch (error) {
     console.error(`Error building project card: ${error.message}`);
-    // Optionally, return a default error message or empty string to prevent breaking the page
-    return "";
+    return ""; //this should only be logged in console, on-screen display would only draw confusion
   }
 }

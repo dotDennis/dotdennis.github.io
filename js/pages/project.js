@@ -2,25 +2,25 @@ import { projects } from "../assets/projects.js";
 import { renderProject } from "../components/renderProject.js";
 
 const container = document.querySelector("main");
-
-const queryString = document.location.search;
-const params = new URLSearchParams(queryString);
+const params = new URLSearchParams(document.location.search);
 
 // get the project from the querystring
 export const query = params.get("project");
 
+// Redirect to 404 page if no querystring 'project' is found
 if (!query) {
   location.href = "/404.html";
 }
 
-// match the project key with id in array.
-const project = projects.find((p) => p.slug === query);
+// Match the project using the slug
+const project = projects.find(({ slug }) => slug === query);
 
+// Redirect to 404 page if project not found or missing required properties
 if (!project || !project.title || !project.description) {
   location.href = "/404.html";
-} else {
-  // Set document title and render the project if valid
-  document.title = `Dennis Løvold | ${project.title}`;
-  document.querySelector("meta[name='description'").setAttribute("content", project.description);
-  container.innerHTML = renderProject(project);
 }
+
+// Set document title and meta description, then render the project
+document.title = `Dennis Løvold | ${project.title}`;
+document.querySelector("meta[name='description']").setAttribute("content", project.description);
+container.innerHTML = renderProject(project);
