@@ -7,6 +7,12 @@
 // 5. Use 0Auth for dashboard?
 
 // Consider replacing this entire projects section with a mdx or md file.
+// rename .project to demo or something? If a project has a link, it'll be for example to a website displaying
+// its usecase, and or the application. Source will always be the github link, no other links go here.
+// Perhaps split it into 'wiki, demo, website, source' to further improve the ux design.
+// .project was a weird choice anyways, confusing with project.external.project ...
+
+// Added dateAdded to allow for organizing later down the road.
 
 import { slugify } from "../utilities/slugify.js";
 
@@ -16,12 +22,14 @@ export let projects = [
     id: 1,
     title: "Datamaskinarkitektur",
     description: "With the primary focus being on storage hierarchy, we have documented and weighted the pros & cons of each piece of technology and/or hardware. Including both older and newer pieces of technology",
+    dateAdded: null,
     image: {
       url: "img/datamaskinarkitektur.png",
       alt: "Snippet of the presentation video, featuring a data center in the background of the title",
+      credit: null,
     },
     external: {
-      website: "https://gitlab.stud.idi.ntnu.no/mlamund/idata1004_gr1-datamaskinarkitektur/-/wikis/home",
+      project: "https://gitlab.stud.idi.ntnu.no/mlamund/idata1004_gr1-datamaskinarkitektur/-/wikis/home",
       source: null,
     },
     introduction: "The first assignment with team interaction. Its main purpose was to introduce us to working in teams, using gitlab and its issue boards we were tasked to deep dive into computer architecture.",
@@ -38,9 +46,9 @@ export let projects = [
     id: 2,
     title: "Lego Project",
     description: "Working together to create an autonomous LEGO® Education SPIKE Prime robot, using pre-programmed instructions we've written to complete various tasks.",
+    dateAdded: null,
     external: {
-      website: "https://gitlab.stud.idi.ntnu.no/dennissl/idata1004_gr1-prosjektoppgave/-/wikis/home",
-      source: null,
+      project: "https://gitlab.stud.idi.ntnu.no/dennissl/idata1004_gr1-prosjektoppgave/-/wikis/home",
     },
     introduction: "This project is yet to be started",
     features: {
@@ -52,19 +60,20 @@ export let projects = [
     id: 3,
     title: "Mappeprosjekt",
     description: "The application uses a text-based UI to provide the user with AI-generated recipies based on an entry of ingredients. Ingredients can be added, removed, modified and are checked on entry.",
+    dateAdded: null,
     image: {
-      url: "img/placeholder-image.png",
-      alt: "Empty placeholder image",
+      url: "img/mappeprosjekt.webp",
+      alt: "Person holding a cup of coffee with latte art in the shape of a heart floral design.",
+      credit: "Photo by <a href='https://unsplash.com/@nate_dumlao?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'>Nathan Dumlao</a> on <a href='https://unsplash.com/photos/focus-photography-of-coffee-artwork-r-KfktlyBL0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'>Unsplash</a>",
     },
     external: {
-      website: null, // it has no website except for the source url.
       source: "https://github.com/NTNU-IE-IIR/mappe-idata1003-2024-foodwaste-dotDennis",
     },
     introduction: "Tasked with developing an application that contributes to consumers becoming increasingly aware of their food waste. Providing the user with an overview of available products in their assortment, and using AI to generate recepies.",
     features: {
       intro: "The application uses native Java, to provide the user with an assortment of products available through a text-based UI.",
       list: [
-        { title: "Java", desc: "This website is project will be built with Java, and has already started slightly." },
+        { title: "Java", desc: "This project will be built with Java, and has already started slightly." },
         { title: "UI", desc: "I've created the class files, but not started on the UI just yet." },
         { title: "AI", desc: "This will be added once everything else is working and setup properly. It's not required, but would be a fun accomplishment." },
       ],
@@ -73,28 +82,28 @@ export let projects = [
   {
     id: 4,
     title: "Programming exercies",
-    description: "The application uses a text-based UI to provide the user with AI-generated recipies based on an entry of ingredients. Ingredients can be added, removed, modified and are checked on entry.",
+    description: "A large collection of Python excercies from one of our Programming subjects. Using Python to solve math equations, starting of rather simple – ends with complex functions solving particullary difficult equations using large datasets.",
+    dateAdded: null,
     image: {
-      url: "img/placeholder-image.png",
-      alt: "Empty placeholder image",
+      url: "img/programmering.webp",
+      alt: "Visual representation of a system of four linear equations with four variables, presented in a mathematical format.",
+      credit: "Photo by <a href='https://unsplash.com/@antoine1003?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'>Antoine Dautry</a> on <a href='https://unsplash.com/photos/mathematics-computation-05A-kdOH6Hw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'>Unsplash</a>",
     },
     external: {
-      website: null, // it has no website except for the source url.
-      source: "https://github.com/NTNU-IE-IIR/mappe-idata1003-2024-foodwaste-dotDennis",
+      source: "https://github.com/dotDennis/programmering",
     },
-    introduction: "Tasked with developing an application that contributes to consumers becoming increasingly aware of their food waste. Providing the user with an overview of available products in their assortment, and using AI to generate recepies.",
+    introduction: "Tasked with solving a large variety of mathematic equation we had to use Python. Provided with an introduction to the language, I had to use datasets, numpy, and mathematics, to create solutions to these challenging exercises.",
     features: {
-      intro: "The application uses native Java, to provide the user with an assortment of products available through a text-based UI.",
+      intro: "A collection of jupyter tasks solved with Python. The average grading I recieved was slightly above 90/100, challenging and fun.",
       list: [
-        { title: "Java", desc: "This website is project will be built with Java, and has already started slightly." },
-        { title: "UI", desc: "I've created the class files, but not started on the UI just yet." },
-        { title: "AI", desc: "This will be added once everything else is working and setup properly. It's not required, but would be a fun accomplishment." },
+        { title: "Python", desc: "The exercies provided me with a gradual introduction to Python. Using functions, arrays, numpy and different datasets to solve challenging mathematics." },
+        { title: "Mathematics", desc: "Utilising the many features of python, I've solved over 90% of the tasks in these exercies. In return I've recieved a great understanding of the way operators work." },
       ],
     },
   },
 ];
 
-// Slugify title, create and add project.slug property.
+// Slugify title, create and add project.slug property. // DO the same for ID?
 projects.forEach((project) => {
   project.slug = slugify(project.title);
 });

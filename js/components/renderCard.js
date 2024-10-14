@@ -1,5 +1,4 @@
 import { slugify } from "../utilities/slugify.js";
-import { buildError } from "./buildError.js";
 
 export function renderCard(project) {
   try {
@@ -8,8 +7,8 @@ export function renderCard(project) {
       throw new Error("Project title is required to build the project card, does project exist?");
     }
 
-    // Check if external.website exists, prepare project_link
-    let project_link = project.external.website ? `<a href="${project.external.website}" target="_blank" rel="noreferrer">View website</a>` : "";
+    // Check if external.project exists, prepare project_link
+    let project_link = project.external?.project ? `<a href="${project.external.project}" target="_blank" rel="noreferrer">View website</a>` : "";
 
     // Generate slug from project.title
     let slug = slugify(project.title);
@@ -32,6 +31,6 @@ export function renderCard(project) {
       </div>`;
   } catch (error) {
     console.error(`Error building project card: ${error.message}`);
-    return ""; //this should only be logged in console, on-screen display would only draw confusion
+    return ""; //this should only be logged in console, on-screen display would only draw confusion (since on homepage)
   }
 }

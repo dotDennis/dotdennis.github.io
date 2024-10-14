@@ -4,12 +4,14 @@ export function renderProject(project) {
     return title && desc ? `<h3>${title}</h3><p>${desc}</p>` : "";
   }
 
-  // turn into a try/catch block to catch and display potential issues
+  // turn into a try/catch block to catch and display potential issues or just redirect to 404 if any issue occurs, won't require all the checks we have in place rn
+  // if we just look for a general error from the functions.
 
-  // Generate optional elements using ternary operators
-  const project_link = project.external.website ? `<a href="${project.external.website}">View Project</a>` : "";
-  const image_link = project.external.website ? `<a title="View the project" aria-label="View the website" href="${project.external.website}"></a>` : "";
-  const source_link = project.external.source ? `<a href="${project.external.source}">View Source</a>` : "";
+  // Generate optional elements using ternary operators - with optional chaining for safe access
+  const project_link = project.external?.project ? `<a href="${project.external.project}">View Project</a>` : "";
+  const image_link = project.external?.project ? `<a title="View the project" aria-label="View the website" href="${project.external.project}"></a>` : "";
+  const image_credit = project.image?.credit ? `<small>${project.image.credit}</small>` : "";
+  const source_link = project.external?.source ? `<a href="${project.external.source}">View Source</a>` : "";
 
   // Generate features HTML by mapping through the features array
   const featuresHTML = project.features.list.map(createFeature).join("");
@@ -36,6 +38,7 @@ export function renderProject(project) {
     <img class="container__image" src="${project.image?.url || "../img/placeholder-image.png"}" alt="${project.image?.alt || "Empty placeholder image"}" />
     ${image_link}
   </div>
+  ${image_credit}
   <section class="container" id="introduction">
     <h2>Introduction</h2>
     <p>${project.introduction}</p>

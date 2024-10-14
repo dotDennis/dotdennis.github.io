@@ -9,7 +9,4 @@ if (projects) {
   projects.forEach((project) => {
     container.innerHTML += renderCard(project);
   });
-} else {
-  console.log("error");
-  container.innerHTML = buildError("101: Error message");
-}
+} 
