@@ -17,3 +17,4 @@ Simplest solution: Live server
 - add 404 to non existant pages, php(?), or other serverside function.
 - update css to sass & fix namings
 - consider astro.build framework
+- update external links to open in new window instead of replacing current doc.window

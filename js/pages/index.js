@@ -9,4 +9,4 @@ if (projects) {
   projects.forEach((project) => {
     container.innerHTML += renderCard(project);
   });
-} 
+}

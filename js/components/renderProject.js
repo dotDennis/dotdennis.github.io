@@ -4,9 +4,6 @@ export function renderProject(project) {
     return title && desc ? `<h3>${title}</h3><p>${desc}</p>` : "";
   }
 
-  // turn into a try/catch block to catch and display potential issues or just redirect to 404 if any issue occurs, won't require all the checks we have in place rn
-  // if we just look for a general error from the functions.
-
   // Generate optional elements using ternary operators - with optional chaining for safe access
   const project_link = project.external?.project ? `<a href="${project.external.project}">View Project</a>` : "";
   const image_link = project.external?.project ? `<a title="View the project" aria-label="View the website" href="${project.external.project}"></a>` : "";
