@@ -12,8 +12,10 @@
   --opacity: 0.85;
 }
 
-/* Add dark-mode? html.darkmode */
+/* Add dark-mode – html.darkmode */
 /* + JS switch & icon to toggle on/off. Default is set by system setting */
+/* Most classes have already been setup to accept this due to the use of variables. */
+/* Darkmode = no shadow, light-mode = slight shadow. */
 
 html {
   scroll-behavior: smooth;
