@@ -35,7 +35,7 @@ export function renderProject(project) {
     </a>
   </section>
   <div class="container__image--container">
-    <img class="container__image" src="${project.image?.url || "../img/placeholder-image.png"}" alt="${project.image?.alt || "Empty placeholder image"}" />
+    <img class="container__image" src="${project.image?.url || "../img/placeholder-image.webp"}" alt="${project.image?.alt || "Empty placeholder image"}" />
     ${image_link}
   </div>
   ${image_credit}

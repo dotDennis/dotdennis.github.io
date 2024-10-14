@@ -12,7 +12,6 @@ Simplest solution: Live server
 
 ## TO DO:
 
-- Webp img formats.
 - Add page navigation (Tricky to find on project pages)
 - Improve accessibility
 - add 404 to non existant pages, php(?), or other serverside function.

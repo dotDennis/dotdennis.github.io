@@ -24,7 +24,7 @@ export let projects = [
     description: "With the primary focus being on storage hierarchy, we have documented and weighted the pros & cons of each piece of technology and/or hardware. Including both older and newer pieces of technology",
     dateAdded: null,
     image: {
-      url: "img/datamaskinarkitektur.png",
+      url: "img/datamaskinarkitektur.webp",
       alt: "Snippet of the presentation video, featuring a data center in the background of the title",
       credit: null,
     },

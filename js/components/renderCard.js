@@ -18,7 +18,7 @@ export function renderCard(project) {
       <div class="flex__item">
         <div class="flex__item--top">
           <div class="flex__item--image">
-            <img src="${project.image?.url || "../img/placeholder-image.png"}" alt="${project.image?.alt || "Empty placeholder image"}" />
+            <img src="${project.image?.url || "../img/placeholder-image.webp"}" alt="${project.image?.alt || "Empty placeholder image"}" />
             <a title="Read more about my ${project.title} project." aria-label="Read about the project" href="project.html?project=${slug}"></a>
           </div>
           <h2>${project.title}</h2>
