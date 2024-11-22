@@ -3,13 +3,7 @@
 
 /* Style content */
 
-.button__return {
-  font-size: 2rem;
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: var(--primary);
-}
+
 
 .container {
   display: flex;
@@ -52,7 +46,6 @@
   object-fit: cover;
   object-position: cover; /* If image is for a website add .container__image--website which should set position to top. */
   width: 100%;
-  margin-bottom: 1rem;
   border-radius: 5px;
   box-shadow: var(--shadow);
   opacity: var(--opacity);
@@ -61,6 +54,15 @@
 .container__image--container:hover {
   transform: translateY(-7px);
   transition: transform 0.3s ease;
+}
+
+small {
+  margin-left: 1rem;
+
+}
+
+small a{
+  font-size: 13px;
 }
 
 .container__subtitle {

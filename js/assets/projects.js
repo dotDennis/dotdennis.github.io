@@ -16,20 +16,20 @@
 
 import { slugify } from "../utilities/slugify.js";
 
-// project 1 includes every property available.
+// project 1 includes of every property available.
 export let projects = [
   {
     id: 1,
     title: "Datamaskinarkitektur",
     description: "With the primary focus being on storage hierarchy, we have documented and weighted the pros & cons of each piece of technology and/or hardware. Including both older and newer pieces of technology",
-    dateAdded: null,
+    dateAdded: "10-04-2024",
     image: {
       url: "img/datamaskinarkitektur.webp",
       alt: "Snippet of the presentation video, featuring a data center in the background of the title",
       credit: null,
     },
     external: {
-      project: "https://gitlab.stud.idi.ntnu.no/mlamund/idata1004_gr1-datamaskinarkitektur/-/wikis/home",
+      link: "https://gitlab.stud.idi.ntnu.no/mlamund/idata1004_gr1-datamaskinarkitektur/-/wikis/home",
       source: null,
     },
     introduction: "The first assignment with team interaction. Its main purpose was to introduce us to working in teams, using gitlab and its issue boards we were tasked to deep dive into computer architecture.",
@@ -46,21 +46,46 @@ export let projects = [
     id: 2,
     title: "Lego Project",
     description: "Working together to create an autonomous LEGO® Education SPIKE Prime robot, using pre-programmed instructions we've written to complete various tasks.",
-    dateAdded: null,
-    external: {
-      project: "https://gitlab.stud.idi.ntnu.no/dennissl/idata1004_gr1-prosjektoppgave/-/wikis/home",
+    dateAdded: "22-10-2024",
+    image: {
+      url: "img/legoprosjekt.webp",
+      alt: "A LEGO® Education SPIKE Prime robot prototype designed for the First Lego League Challenge, featuring a four-wheel base and an extended arm mechanism.",
     },
-    introduction: "This project is yet to be started",
+    external: {
+      link: "https://gitlab.stud.idi.ntnu.no/dennissl/idata1004_gr1-prosjektoppgave/-/wikis/home",
+    },
+    introduction: "This project involved designing and programming an autonomous robot to solve tasks related to marine ecosystem challenges, fostering teamwork and technical skills.",
     features: {
-      intro: "",
-      list: [{ title: null, desc: null }],
+      intro: "A comprehensive look into the creation of an autonomous LEGO robot, addressing real-world environmental issues while emphasizing teamwork and iterative development.",
+      list: [
+        {
+          title: "Autonomous Design",
+          desc: "Developed and programmed a robot to autonomously execute tasks on a game board within a time limit.",
+        },
+        {
+          title: "Environmental Focus",
+          desc: "Addressed challenges like marine pollution and coral reef restoration through carefully chosen tasks.",
+        },
+        {
+          title: "Key Challenges",
+          desc: "Faced communication breakdowns, attendance issues, and tight deadlines, learning to adapt and overcome obstacles.",
+        },
+        {
+          title: "Technologies and Methods",
+          desc: "Utilized GitLab for task management, followed a structured project plan, and applied iterative development techniques.",
+        },
+        {
+          title: "Worth mentioning",
+          desc: "The report delivered will be added to the gitlab link attached once grading is complete. Due to deadline limiting my ability to update the GitLab with any new content.",
+        },
+      ],
     },
   },
   {
     id: 3,
     title: "Mappeprosjekt",
     description: "The application uses a text-based UI to provide the user with AI-generated recipies based on an entry of ingredients. Ingredients can be added, removed, modified and are checked on entry.",
-    dateAdded: null,
+    dateAdded: "10-05-2024",
     image: {
       url: "img/mappeprosjekt.webp",
       alt: "Person holding a cup of coffee with latte art in the shape of a heart floral design.",
@@ -83,7 +108,7 @@ export let projects = [
     id: 4,
     title: "Programming exercies",
     description: "A large collection of Python excercies from one of our Programming subjects. Using Python to solve math equations, starting of rather simple – ends with complex functions solving particullary difficult equations using large datasets.",
-    dateAdded: null,
+    dateAdded: "10-04-2024",
     image: {
       url: "img/programmering.webp",
       alt: "Visual representation of a system of four linear equations with four variables, presented in a mathematical format.",

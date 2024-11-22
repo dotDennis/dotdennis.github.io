@@ -5,8 +5,8 @@ export function renderProject(project) {
   }
 
   // Generate optional elements using ternary operators - with optional chaining for safe access
-  const project_link = project.external?.project ? `<a href="${project.external.project}">View Project</a>` : "";
-  const image_link = project.external?.project ? `<a title="View the project" aria-label="View the website" href="${project.external.project}"></a>` : "";
+  const project_link = project.external?.link ? `<a href="${project.external.link}">View Project</a>` : "";
+  const image_link = project.external?.project ? `<a title="View the project" aria-label="View the website" href="${project.external.link}"></a>` : "";
   const image_credit = project.image?.credit ? `<small>${project.image.credit}</small>` : "";
   const source_link = project.external?.source ? `<a href="${project.external.source}">View Source</a>` : "";
 
@@ -28,7 +28,7 @@ export function renderProject(project) {
     <h1>${project.title}</h1>
     <p class="lead">${project.description}</p>
     <a class="cta-scroll" href="#introduction">
-      <span class="material-icons">keyboard_arrow_down</span>
+      <span class="material-symbols-outlined">keyboard_arrow_down</span>
     </a>
   </section>
   <div class="container__image--container">

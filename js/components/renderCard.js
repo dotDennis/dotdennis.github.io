@@ -8,7 +8,7 @@ export function renderCard(project) {
     }
 
     // Check if external.project exists, prepare project_link
-    let project_link = project.external?.project ? `<a href="${project.external.project}" target="_blank" rel="noreferrer">View website</a>` : "";
+    let project_link = project.external?.link ? `<a href="${project.external.link}" target="_blank" rel="noreferrer">View website</a>` : "";
 
     // Generate slug from project.title
     let slug = slugify(project.title);
@@ -30,7 +30,7 @@ export function renderCard(project) {
         </div>
       </div>`;
   } catch (error) {
-    console.error(`Error building project card: ${error.message}`);
+    console.error(`Error building Project ${project.id}'s card: ${error.message}`);
     return ""; //this should only be logged in console, on-screen display would only draw confusion (since on homepage)
   }
 }
